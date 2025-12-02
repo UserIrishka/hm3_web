@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 2rem;
   width: 100%;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero {
@@ -144,53 +148,6 @@
   box-shadow: none;
 }
 
-.about {
-  text-align: center;
-  padding: 3rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 20px;
-  margin-top: 3rem;
-}
-
-.about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
-  font-weight: 700;
-}
-
-.about p {
-  font-size: 1.2rem;
-  color: #5d6d7e;
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  line-height: 1.7;
-}
-
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.tech-tag {
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
-  transition: all 0.3s ease;
-}
-
-.tech-tag:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
-}
-
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -234,14 +191,6 @@
   .feature-card {
     padding: 2rem 1.5rem;
   }
-  
-  .about {
-    padding: 2rem 1rem;
-  }
-  
-  .about h2 {
-    font-size: 2rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -261,10 +210,5 @@
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     min-width: 150px;
-  }
-  
-  .tech-tag {
-    padding: 0.4rem 1rem;
-    font-size: 0.9rem;
   }
 }

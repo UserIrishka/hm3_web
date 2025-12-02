@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './Weather.css';
 
-// Типы для данных о погоде
 interface WeatherData {
   name: string;
   sys: {
@@ -30,12 +29,10 @@ export default function Weather() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Проверяем, солнечная ли погода
   const isSunny = weatherData && 
     (weatherData.weather[0]?.icon === '01d' || 
      weatherData.weather[0]?.icon === '01n');
 
-  // Получаем URL иконки
   const iconSrc = weatherData && !isSunny
     ? `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`
     : '';
