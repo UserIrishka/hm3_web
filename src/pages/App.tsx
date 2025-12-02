@@ -9,43 +9,39 @@ export default function App() {
     <>
       <nav className="navbar">
         <div className="nav-container">
-<<<<<<< Updated upstream
           <div className="logo">
             <span className="logo-text">🌐 API Hub</span>
           </div>
           <div className="nav-links">
-            <NavLink 
-              to="/" 
-              className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               <span className="nav-icon">🏠</span>
               <span className="nav-text">Главная</span>
             </NavLink>
-            
-            <NavLink 
-              to="/weather" 
-              className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+
+            <NavLink
+              to="/weather"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               <span className="nav-icon">🌤️</span>
               <span className="nav-text">Погода</span>
             </NavLink>
-            
-            <NavLink 
-              to="/books" 
-              className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+
+            <NavLink
+              to="/books"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
             >
               <span className="nav-icon">📚</span>
               <span className="nav-text">Книги</span>
             </NavLink>
-=======
-          <div className="nav-links">
-            <Link to="/" className="nav-link">
-              Главная
-            </Link>
-            <Link to="/books" className="nav-link">
-              Книги
-            </Link>
->>>>>>> Stashed changes
           </div>
         </div>
       </nav>

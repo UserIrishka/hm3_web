@@ -85,14 +85,18 @@
 /* Активная ссылка */
 .nav-link.active {
   color: white;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.2),
+    rgba(118, 75, 162, 0.2)
+  );
   border: 1px solid rgba(102, 126, 234, 0.4);
   border-top: none;
   box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
 }
 
 .nav-link.active::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
@@ -128,13 +132,23 @@
 
 /* Анимации */
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 /* Основной контент */
@@ -174,69 +188,52 @@ main > * {
     height: auto;
     padding: 1rem;
   }
-  
+
   .logo {
     margin-bottom: 1rem;
   }
-  
+
   .nav-links {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-  
+
   .nav-link {
     padding: 0.8rem 1.2rem;
     border-radius: 10px;
     height: auto;
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .nav-link.active::before {
     display: none;
   }
-  
+
   .nav-link.active {
     border-radius: 10px;
     border: 1px solid rgba(102, 126, 234, 0.6);
   }
-  
+
   .logo-text {
     font-size: 1.5rem;
   }
 }
 
-<<<<<<< Updated upstream
 @media (max-width: 480px) {
   .nav-links {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .nav-link {
     width: 100%;
     justify-content: center;
     padding: 1rem;
   }
-  
+
   .logo-text {
     font-size: 1.3rem;
   }
 }
-=======
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-.main-content {
-  flex: 1;
-  padding: 2rem;
-  max-width: 1200px; /* Ограничивает ширину родителя */
-  margin: 0 auto; /* Центрирует родителя */
-  width: 100%;
-}
->>>>>>> Stashed changes
