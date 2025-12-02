@@ -1,0 +1,157 @@
+/* src/pages/Books/Books.css */
+.books-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.books-container {
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 10px;
+  min-height: 400px;
+}
+
+.books-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  /* Уточнил селектор */
+  flex: 1 1 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-box select {
+  /* Уточнил селектор */
+  width: 180px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.books-container button {
+  /* Уточнил селектор */
+  padding: 10px 20px;
+  background: #db9af9ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.books-container button:disabled {
+  /* Уточнил селектор */
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.clear-btn {
+  padding: 10px 20px;
+  background: #fff;
+  color: #764ba2;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.clear-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.welcome-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.welcome-content {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  max-width: 550px;
+}
+
+.welcome-content h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.welcome-content .emoji {
+  font-size: 50px;
+  margin-bottom: 5px;
+}
+
+.hint {
+  font-size: 14px;
+  color: #eee;
+  margin-top: 10px;
+  font-style: Arial, sans-serif;
+}
+
+.hint .highlight {
+  color: white;
+  font-weight: bold;
+}
+
+.books-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.book-card img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.placeholder {
+  width: 100px;
+  height: 150px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 12px;
+  color: #555;
+}
+
+.loading,
+.error,
+.no-results {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+}

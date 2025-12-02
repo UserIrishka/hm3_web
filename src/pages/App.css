@@ -207,6 +207,7 @@ main > * {
   }
 }
 
+<<<<<<< Updated upstream
 @media (max-width: 480px) {
   .nav-links {
     flex-direction: column;
@@ -223,3 +224,19 @@ main > * {
     font-size: 1.3rem;
   }
 }
+=======
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px; /* Ограничивает ширину родителя */
+  margin: 0 auto; /* Центрирует родителя */
+  width: 100%;
+}
+>>>>>>> Stashed changes

@@ -9,6 +9,7 @@ export default function App() {
     <>
       <nav className="navbar">
         <div className="nav-container">
+<<<<<<< Updated upstream
           <div className="logo">
             <span className="logo-text">🌐 API Hub</span>
           </div>
@@ -36,6 +37,15 @@ export default function App() {
               <span className="nav-icon">📚</span>
               <span className="nav-text">Книги</span>
             </NavLink>
+=======
+          <div className="nav-links">
+            <Link to="/" className="nav-link">
+              Главная
+            </Link>
+            <Link to="/books" className="nav-link">
+              Книги
+            </Link>
+>>>>>>> Stashed changes
           </div>
         </div>
       </nav>
