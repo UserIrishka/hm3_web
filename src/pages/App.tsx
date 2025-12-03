@@ -2,6 +2,7 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import Home from "./Home";
 import Books from "./Books";
 import Weather from "./Weather";
+import Movies from "./Movies";
 import "./App.css";
 
 export default function App() {
@@ -42,6 +43,16 @@ export default function App() {
               <span className="nav-icon">📚</span>
               <span className="nav-text">Книги</span>
             </NavLink>
+
+            <NavLink
+              to="/movies"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              <span className="nav-icon">🎬</span>
+              <span className="nav-text">Фильмы</span>
+            </NavLink>
           </div>
         </div>
       </nav>
@@ -51,6 +62,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Books />} />
           <Route path="/weather" element={<Weather />} />
+          <Route path="/movies" element={<Movies />} />
         </Routes>
       </main>
     </>

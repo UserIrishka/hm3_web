@@ -21,7 +21,7 @@ export default function Home() {
           <div className="feature-icon">🎬</div>
           <h3>Фильмы</h3>
           <p>Поиск информации о фильмах и сериалах</p>
-          <button className="btn disabled">Скоро</button>
+          <Link to="/movies" className="btn">Перейти к фильмам</Link>
         </div>
 
         <div className="feature-card">
@@ -35,7 +35,7 @@ export default function Home() {
       <div className="about">
         <h2>О нашем сервисе</h2>
         <p>
-          Это демонстрационное приложение, созданное с использованием React, TypeScript и Vite. 
+          Это демонстрационное приложение, созданное с использованием React, TypeScript и Vite.
           Оно демонстрирует работу с различными API и современными веб-технологиями.
         </p>
         <div className="tech-stack">
