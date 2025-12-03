@@ -285,7 +285,7 @@
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  color: #2d3436;        /* базовый тёмный цвет текста */
+  color: #2d3436;      
   font-size: 16px;
 }
 
@@ -305,7 +305,7 @@
   padding: 2rem;
 }
 
-/* Гарантируем тёмный текст в модалке */
+
 .movie-details,
 .details-main,
 .details-info,
@@ -373,7 +373,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  border: 1px dashed rgba(0, 0, 0, 0.1); /* можно убрать позже */
+  border: 1px dashed rgba(0, 0, 0, 0.1); 
   padding: 0.25rem 0.5rem;
 }
 
@@ -390,12 +390,12 @@
 .movies-grid,
 .movie-card,
 .movie-info {
-  overflow: visible;        /* Ничего не скрываем */
+  overflow: visible;     
 }
 
 .movie-title,
 .movie-type {
-  white-space: normal;      /* Разрешаем переносы строк */
+  white-space: normal;   
   overflow-wrap: break-word;
 }
 .error-state {
@@ -404,12 +404,12 @@
   background: white;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: #2d3436 !important; /* тёмный текст внутри блока ошибки */
+  color: #2d3436 !important; 
 }
 
 .error-state h3,
 .error-state p {
-  color: #2d3436 !important; /* тёмный текст заголовка и описания */
+  color: #2d3436 !important; 
 }
 .error-state {
   text-align: center;
@@ -417,12 +417,12 @@
   background: white;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: #2d3436 !important; /* тёмный текст внутри блока ошибки */
+  color: #2d3436 !important;
 }
 
 .error-state h3,
 .error-state p {
-  color: #2d3436 !important; /* тёмный текст заголовка и описания */
+  color: #2d3436 !important; 
 }
 
 
