@@ -27,7 +27,7 @@ interface MovieDetails {
 }
 
 const API_KEY = "808fbcb9";
-const BASE_URL = "http://www.omdbapi.com/";
+const BASE_URL = "https://www.omdbapi.com/";
 
 const Movies: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
