@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import type { Book, SearchType } from "../services/bookAPI";
 import { searchBooks as fetchBooks } from "../services/bookAPI";
-import "./Books.css"; // Импорт стилей
+import "./Books.css";
 
 const Books: React.FC = () => {
   const [query, setQuery] = useState<string>("");
@@ -11,7 +11,6 @@ const Books: React.FC = () => {
   const [error, setError] = useState<string>("");
   const [hasSearched, setHasSearched] = useState<boolean>(false);
 
-  // Очистка поиска
   const clearSearch = useCallback(() => {
     setQuery("");
     setBooks([]);
@@ -19,7 +18,6 @@ const Books: React.FC = () => {
     setHasSearched(false);
   }, []);
 
-  // Функция поиска
   const searchBooksHandler = async () => {
     if (!query.trim()) return;
 
