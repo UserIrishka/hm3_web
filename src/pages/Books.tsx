@@ -4,7 +4,6 @@ import { searchBooks as fetchBooks } from "../services/bookAPI";
 import "./Books.css"; // Импорт стилей
 
 const Books: React.FC = () => {
-  // Заменяет Vue ref() на useState() с указанием типов
   const [query, setQuery] = useState<string>("");
   const [searchType, setSearchType] = useState<SearchType>("title");
   const [books, setBooks] = useState<Book[]>([]);
@@ -57,11 +56,11 @@ const Books: React.FC = () => {
 
         <div className="search-box">
           <input
-            value={query} // v-model заменен на value и onChange
+            value={query}
             onChange={(e) => setQuery(e.target.value)}
             type="text"
             placeholder="Введите название книги или автора"
-            onKeyDown={handleKeyDown} // @keyup.enter
+            onKeyDown={handleKeyDown}
           />
           <select
             value={searchType}
@@ -70,13 +69,10 @@ const Books: React.FC = () => {
             <option value="title">По названию</option>
             <option value="author">По автору</option>
           </select>
-          <button
-            onClick={searchBooksHandler}
-            disabled={!query || loading} // :disabled
-          >
+          <button onClick={searchBooksHandler} disabled={!query || loading}>
             Поиск
           </button>
-          {/* Условный рендеринг (v-if) */}
+          {}
           {(query || hasSearched) && (
             <button
               onClick={clearSearch}
@@ -88,7 +84,7 @@ const Books: React.FC = () => {
           )}
         </div>
 
-        {/* Условный рендеринг: Приветственное сообщение */}
+        {}
         {!books.length && !loading && !error && !hasSearched && (
           <div className="welcome-message">
             <div className="welcome-content">
@@ -106,12 +102,12 @@ const Books: React.FC = () => {
         {loading && <div className="loading">Загрузка...</div>}
         {error && <div className="error">{error}</div>}
 
-        {/* Условный рендеринг: Список книг (v-if и v-for) */}
+        {}
         {books.length > 0 && (
           <div className="books-list">
             {books.map((book) => (
               <div key={book.id} className="book-card">
-                {/* Вложенный v-if/v-else */}
+                {}
                 {book.cover ? (
                   <img src={book.cover} alt="Обложка книги" />
                 ) : (
@@ -125,7 +121,7 @@ const Books: React.FC = () => {
           </div>
         )}
 
-        {/* Условный рендеринг: Ничего не найдено (v-else-if) */}
+        {}
         {!loading && !error && hasSearched && books.length === 0 && (
           <div className="no-results">Ничего не найдено.</div>
         )}

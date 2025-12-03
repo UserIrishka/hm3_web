@@ -1,4 +1,3 @@
-/* src/pages/Books/Books.css */
 .books-page {
   max-width: 900px;
   margin: 0 auto;
@@ -29,7 +28,6 @@
 }
 
 .search-box input {
-  /* Уточнил селектор */
   flex: 1 1 100px;
   padding: 10px;
   border: none;
@@ -38,7 +36,6 @@
 }
 
 .search-box select {
-  /* Уточнил селектор */
   width: 180px;
   padding: 10px;
   font-size: 16px;
@@ -46,7 +43,6 @@
 }
 
 .books-container button {
-  /* Уточнил селектор */
   padding: 10px 20px;
   background: #db9af9ff;
   color: white;
@@ -57,7 +53,6 @@
 }
 
 .books-container button:disabled {
-  /* Уточнил селектор */
   background: #ccc;
   cursor: not-allowed;
 }
