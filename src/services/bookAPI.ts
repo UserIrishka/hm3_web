@@ -1,4 +1,3 @@
-// src/services/booksAPI.ts
 export interface BookFromAPI {
   key: string;
   title?: string;
@@ -39,7 +38,20 @@ export async function searchBooks(
 
     const data = await res.json();
 
-    const docs: BookFromAPI[] = data.docs ?? [];
+    let docs: BookFromAPI[] = data.docs ?? [];
+
+    if (type === "author") {
+      const q = query.toLowerCase();
+
+      docs = docs.filter((book) => {
+        if (!book.author_name) return false;
+
+        return book.author_name.some((a) => {
+          const words = a.toLowerCase().split(/\s+/);
+          return words.includes(q);
+        });
+      });
+    }
 
     return docs.slice(0, limit).map((book) => ({
       id: (book.key ?? Math.random().toString(36).slice(2)) as string,
